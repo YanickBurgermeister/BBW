@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>The crowdfunding app</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="css/mvp.css">
+	</head>
+	<body>
+		<main>
+			<h1>The crowdfunding app</h1>
+			<img class="img-fluid" width="200" src="images/Crowdfunding.png" alt="Crowdfunding image"/>
+			<div>
+				<h2>Neuen Spende erfassen</h2>
+				<form th:object="${item}" th:action="@{/newdonation}" method="post">
+					<label>SpenderIn:</label>
+					<input type="text" name="donor" th:field="*{donor}"/>
+					<label>Betrag:</label>
+					<input type="text" name="amount" th:field="*{amount}"/>
+					<label>Geschlecht:</label>
+					<select th:field="*{gender}">
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+					<button type="submit">Hinzufügen</button>
+				</form>
+			</div>
+			<div>
+				<h2>Erfasste Spenden</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>SpenderIn</th>
+							<th>Betrag</th>
+							<th>Geschlecht</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="item : ${donationlist}">
+							<td th:text="${item.donor}"></td>
+							<td th:text="${item.amount}"></td>
+							<td th:text="${item.gender}"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<a href="/deleteLast"><button>letzte Spende löschen</button></a>
+				
+				<label>Summe der Spenden</label>
+				<output th:text="${amount}"></output>
+			</div>
+		</main>
+		<footer>
+			<p><small>©2023 / Author: Yanick Burgermeister</small></p>
+		</footer>
+	</body>
+</html>

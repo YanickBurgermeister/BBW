@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Location</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="icon" href="images/clipart.png">
+	</head>
+	<body>
+		<header>
+			<h1 id="h1Lebensraum">Lebensraum in der Schweiz</h1>
+			<nav id="menu">
+				<a class="active" href="index.html">Startseite</a>
+				<a class="active" href="galerie.html">Galerie</a>
+				<a class="disabled">Lebensraum</a>
+				<a class="active" href="besuch.html">Besuch</a>
+				<a class="active" href="Impressum.html">Impressum</a>
+			</nav>
+		</header>
+		<main id="location">
+			<div class="mainMap">
+				<img src="images/schweiz.png" id="schweiz" ondragover="hoverFunction">
+			</div>
+			<div class="mainMap">
+				<img src="images/lebensraum.png" id="lebensraum">
+			</div>
+			<div class="mainMap">
+				<a id="infos" href="besuch.html">Besuchen</a>
+			</div>
+		
+		</main>
+		<footer>
+			<ul>
+				<li><a href="Impressum.html">Impressum</a></li>
+				<li><a href="Impressum.html">Kontakt</a></li>
+				<li><p>© Copyright by Yanick Burgermeister</p></li>
+			</ul>
+		</footer>
+		<script>
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.querySelector("nav").style.top = "0";
+					document.querySelector("nav").style.borderBottom = "3px solid lightslategrey";
+				} else {
+					document.querySelector("nav").style.borderBottom = "none";
+				}
+			}
+			
+			function hoverFunction() {
+				document.querySelector("#lebensraum").style.transform = "scale(100)"
+			}
+		</script>
+	</body>
+</html>

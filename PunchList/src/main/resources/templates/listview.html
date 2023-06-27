@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+      <Link rel="stylesheet" href="/css/mvp.css">
+        <title>Punch List</title>
+    </head>
+    <body>
+      <main>
+        <h1><a href="/">Punch List</a></h1>
+        <table>
+          <thead>
+            <tr>
+              <th>erledigt</th>
+              <th>Kathegory</th>
+              <th>Verantwortlicher</th>
+              <th>Beschreibung</th>
+              <th>Fälligkeit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="item : ${punchlist}">
+              <td ><input type="checkbox" th:checked="${item.done}" /></td>
+              <td th:text="${item.category}"></td>
+              <td th:text="${item.responsible}"></td>
+              <td th:text="${item.description}"></td>
+              <td th:text="${item.endDate.toString().substring(8,10)} + '. ' + ${item.endDate.toString().substring(4,7)} + ' ' + ${item.endDate.toString().substring(25,29)}" ></td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+
+    </body>
+  <script>
+
+  </script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tierwelt</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="icon" href="images/clipart.png">
+	</head>
+	<body>
+		<header>
+			<h1>Der Steinbock</h1>
+			<nav id="navbar">
+				<a class="disabled">Startseite</a>
+				<a class="active" href="galerie.html">Galerie</a>
+				<a class="active" href="lebensraum.html">Lebensraum</a>
+				<a class="active" href="besuch.html">Besuch</a>
+				<a class="active" href="Impressum.html">Impressum</a>
+			</nav>
+		</header>
+		<main id="startseite">
+			<div>
+				<div id="1">
+					<aside>
+						<div><h3>Der Steinbock auch als ♑Sternzeichen♑</h3></div>
+						<p>Der Steinbock ist das zehnte Sternzeichen im Tierkreis und wird von der Sonne vom 22.
+						   Dezember bis zum 20. Januar durchlaufen. Er wird von Saturn regiert, was ihm seine
+						   disziplinierte und zielstrebige Natur verleiht. Steinböcke sind bekannt für ihre
+						   Entschlossenheit und Hartnäckigkeit bei der Verfolgung ihrer Ziele, und sie sind bereit,
+						   lange und harte Arbeit zu leisten, um ihre Ambitionen zu verwirklichen.</p>
+					</aside>
+					<figure>
+						<a href="galerie.html">
+							<img src="images/start1.png">
+						</a>
+						<figcaption>Galerie</figcaption>
+					</figure>
+				</div>
+				
+				<div id="2">
+					<aside>
+						<div><h3>Der Lebensraum</h3></div>
+						<p>Steinböcke sind im Allgemeinen in felsigen, bergigen Regionen zu finden, insbesondere in den
+						   Alpen, den Rocky Mountains und den Himalaya-Gebirgen. Sie bevorzugen steile Hänge und felsige
+						   Klippen als Rückzugsorte. Aufgrund ihrer kletternden Fähigkeiten fühlen sie sich in hohen
+						   Lagen und schwierigem Terrain am wohlsten. In diesen Gebieten finden sie auch ihre bevorzugte
+						   Nahrung, darunter Gräser, Kräuter, Blätter und Rinde von Bäumen und Sträuchern.</p>
+					</aside>
+					<figure>
+						<a href="lebensraum.html">
+							<img src="images/start2.png">
+						</a>
+						<figcaption>Lebensraum</figcaption>
+					</figure>
+				</div>
+				
+				<div id="3">
+					<aside>
+						<div><h3>Das Besuchen von Steinböcken</h3></div>
+						<p>Obwohl Steinböcke oft in schwer zugänglichen Gebieten leben, gibt es in einigen Ländern
+						   Wildparks und Naturschutzgebiete, in denen man Steinböcke besuchen und beobachten kann.
+						   Besucher sollten jedoch vorsichtig sein, da Steinböcke wild sind und ein gewisses Maß an
+						   Respekt und Abstand benötigen. Wanderungen und geführte Touren sind oft die besten
+						   Möglichkeiten, um Steinböcke in freier Wildbahn zu sehen, da erfahrene Führer die besten
+						   Plätze kennen und sich um die Sicherheit der Besucher kümmern können.</p>
+					</aside>
+					<figure>
+						<a href="besuch.html">
+							<img src="images/start3.png">
+						</a>
+						<figcaption>besuchen</figcaption>
+					</figure>
+				</div>
+			
+			
+			</div>
+		</main>
+		<footer>
+			<ul>
+				<li><a href="Impressum.html">Impressum</a></li>
+				<li><a href="Impressum.html">Kontakt</a></li>
+				<li><p>© Copyright by Yanick Burgermeister</p></li>
+			</ul>
+		</footer>
+		<script>
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.querySelector("nav").style.top = "0";
+					document.querySelector("nav").style.borderBottom = "3px solid lightslategrey";
+				} else {
+					document.querySelector("nav").style.borderBottom = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

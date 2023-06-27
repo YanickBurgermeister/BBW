@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <Link rel="stylesheet" href="/css/mvp.css">
+        <title>Punch List</title>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Punch-List Wylandlauf</h1>
+                <form th:object="${item}" th:action="@{/addEntry}" method="post">
+                    <h3>Bitte ausfüllen:</h3>
+
+                    <input type="checkbox" id="checkbox" th:field="*{done}" />
+
+                    <label for="kathegory">Kathegory:</label>
+                    <select id="kathegory" th:field="*{category}" >
+                        <option value="Start">Start</option>
+                        <option value="Zieleinlauf">Zieleinlauf</option>
+                        <option value="Festwirtschaft">Festwirtschaft</option>
+                        <option value="Sanität">Sanität</option>
+                        <option value="Strecke">Strecke</option>
+                    </select>
+
+                    <label for="responsible">Verantwortlicher:</label>
+                    <input type="text" id="responsible" placeholder="Verantwortlicher" th:field="*{responsible}" />
+
+                    <label for="beschreibung">Beschreibung:</label>
+                    <input type="text" id="beschreibung" placeholder="Beschreibung" th:field="*{description}" />
+
+                    <label for="fälligkeit">Fälligkeit:</label>
+                    <input type="date" id="fälligkeit" th:field="*{endDate}"/>
+
+                    <button >Submit</button>
+                </form>
+            </header>
+            <h1><a href="/showList">Punch List</a></h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>erledigt</th>
+                        <th>Kathegory</th>
+                        <th>Verantwortlicher</th>
+                        <th>Beschreibung</th>
+                        <th>Fälligkeit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item : ${punchlist}">
+                        <td><input type="checkbox" th:checked="${item.done}" /></td>
+                        <td th:text="${item.category}"></td>
+                        <td th:text="${item.responsible}"></td>
+                        <td th:text="${item.description}"></td>
+                        <td th:text="${item.endDate.toString().substring(8,10)} + '. ' + ${item.endDate.toString().substring(4,7)} + ' ' + ${item.endDate.toString().substring(25,29)}" ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+    <script>
+    </script>
+</html>

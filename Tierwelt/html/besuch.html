@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Galerie</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="icon" href="images/clipart.png">
+	</head>
+	<body>
+		<header>
+			<h1>Besuch</h1>
+			<nav id="menu">
+				<a class="active" href="index.html">Startseite</a>
+				<a class="active" href="galerie.html">Galerie</a>
+				<a class="active" href="lebensraum.html">Lebensraum</a>
+				<a class="disabled">Besuch</a>
+				<a class="active" href="Impressum.html">Impressum</a>
+			</nav>
+		</header>
+		<main id="besuchen">
+			<div id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.5910341655403!2d10.197837015582797!3d46.66662607913359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47836a1cbb0c93a5%3A0xe87097f43f5fcb8c!2sSchweizerischer%20Nationalpark!5e1!3m2!1sde!2sch!4v1678967367981!5m2!1sde!2sch"
+				        width="600" height="450" style="border:0; margin: 1rem" allowfullscreen="allowfullscreen"
+				        loading="lazy"
+				        referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
+				<aside>
+					<p>Der Steinbock wird oft mit den Alpen und der Schweiz in Verbindung gebracht, da diese
+					   majestätischen Tiere in den Bergen heimisch sind. Besucher, die in der Schweiz sind und
+					   Steinböcke sehen möchten, haben mehrere Möglichkeiten. Eine
+					   Möglichkeit ist, die Berggipfel zu besteigen, die für ihre Steinbockpopulation bekannt sind. Die
+					   Bergwelt von Graubünden, wie zum Beispiel das Val Mora, ist ein großartiger Ort, um Steinböcke in
+					   ihrem natürlichen Lebensraum zu beobachten. Es gibt auch Nationalparks, wie den Nationalpark im
+					   Engadin, der speziell für den Schutz von Steinböcken eingerichtet wurde. Hier können Besucher
+					   durch das Gebiet wandern und die Tiere in freier Wildbahn erleben. Der Nationalpark im Engadin
+					   ist einer der ältesten Nationalparks Europas und wurde 1914
+					   gegründet. Der Park erstreckt sich über eine Fläche von 170 Quadratkilometern und beherbergt eine
+					   beeindruckende Vielfalt an Pflanzen- und Tierarten, darunter auch die majestätischen Steinböcke.
+					   Der Nationalpark Engadin ist auch ein wichtiger Schutzraum für bedrohte Tierarten. Durch den
+					   Schutz dieser Arten trägt der Nationalpark zum Erhalt der biologischen Vielfalt bei und
+					   ermöglicht es Besuchern, eine unberührte Natur zu erleben. Es ist wichtig, bei einem Besuch
+					   darauf zu achten, dass die Steinböcke nicht gestört oder
+					   gefährdet werden. Respektiere ihre natürliche Umgebung und halte einen sicheren Abstand ein. Auch
+					   ein Besuch in den Besucherzentren ist eine tolle Möglichkeit, mehr über die Steinböcke und ihre
+					   Lebensweise zu erfahren. Insgesamt ist ein Besuch der Steinböcke in der Schweiz eine
+					   unvergessliche Erfahrung und eine
+					   großartige Möglichkeit, die Natur und ihre wunderbaren Bewohner zu erleben.</p>
+				</aside>
+			</div>
+			<div id="mehrInfosDiv">
+				<a href="https://www.graubuenden.ch/de/aktivitaeten/sommer/wandern/tipps-nationalparkwaechter#:~:text=Auf%20der%20Alp%20Trupchun%2C%20der,Feldstecher%20oder%20ein%20Fernrohr%20empfehlenswert."
+				   type="button" id="mehrInfos">Mehr Infos dazu finden Sie hier!</a>
+			</div>
+		
+		</main>
+		<footer>
+			<ul>
+				<li><a href="Impressum.html">Impressum</a></li>
+				<li><a href="Impressum.html">Kontakt</a></li>
+				<li><p>© Copyright by Yanick Burgermeister</p></li>
+			</ul>
+		</footer>
+		<script>
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.querySelector("nav").style.top = "0";
+					document.querySelector("nav").style.borderBottom = "3px solid lightslategrey";
+				} else {
+					document.querySelector("nav").style.borderBottom = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

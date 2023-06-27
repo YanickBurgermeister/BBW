@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schreinerei Meier, Dingenskirchen</title>
+</head>
+<style>
+    body {
+        max-width: 60em;
+        margin: 0.5em auto;
+        background: beige;
+    }
+
+    @media (min-width: 30em) {
+        section {
+            display: grid;
+            grid-template-columns: 1fr 12em;
+        }
+        section h2 {
+            grid-column: 1 / -1;
+        }
+    }
+
+    #angebot {
+        background-color: firebrick;
+        padding: 1em;
+        width: 10em;
+        text-align: center;
+    }
+
+    #angebot h3 {
+        font-size: 2em;
+        font-variant: small-caps;
+        color: lightyellow;
+    }
+
+    #angebot p {
+        color: white;
+    }
+
+    h1 {
+        border: thin solid transparent;
+    }
+
+    h2 {
+        font-size: 2em;
+        color: firebrick;
+        background-color: LightSalmon;
+        border: thin solid;
+        text-align: center;
+    }
+
+    p {
+        color: brown;
+        font-size: 1.1em;
+    }
+
+    header {
+        height: 5em;
+        padding: 0 1em;
+        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: 6em 1fr 1fr;
+    }
+
+    header p:first-of-type {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    header p:last-of-type {
+        transform: rotate(-10deg);
+        border: thin solid;
+        padding: 0.5em;
+        border-radius: 0.2em;
+        align-self: end;
+        width: 14em;
+    }
+
+    header #backlink {
+        display: inline-block;
+        text-shadow: none;
+        color: transparent;
+        background: url(https://src.selfhtml.org/kurse/html-einstieg/img/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 5em;
+        height: 5em;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 10em;
+    }
+
+    footer > * {
+        grid-column: -2 / -1;
+    }
+</style>
+<body>
+<header>
+    <a id="backlink" href="/"></a>
+    <p>Schreinerei Meier</p>
+    <p>ihre Werkstatt für gutes Wohnen!</p>
+</header>
+<nav>
+    <ul>
+        <li><a tabindex="0" aria-current="page">Startseite</a>
+        </li>
+        <li><a href="preise.html">Unsere Preise</a>
+        </li>
+        <li><a href="inhalt.html">Bilder von unseren Produkten</a>
+        </li>
+    </ul>
+</nav>
+<h1>Willkommen bei der Schreinerei Meier im Internet!</h1>
+<p>Wir sind seit vielen Jahren darauf spezialisiert, alle Kundenwünsche zu erfüllen.
+    In unserer Werkstatt produzieren wir selbst - mit Holz aus regionaler, nachhaltiger
+    Forstwirtschaft.</p>
+<section>
+    <h2>Unsere Leistungen:</h2>
+    <ul id="leistungen">
+        <li>Möbel nach Ihren Wünschen
+            <ul>
+                <li>Küchenmöbel</li>
+                <li>Regale und Schrankwände</li>
+                <li>Badezimmermöbel</li>
+            </ul>
+        </li>
+        <li>Haustüren</li>
+        <li>Gartenzäune</li>
+        <li>Reparaturen</li>
+    </ul>
+    <aside id="angebot">
+        <h3>Angebot</h3>
+        <p>Nächste Woche 10% auf alles!</p>
+    </aside>
+</section>
+<h2>Unsere Geschichte:</h2>
+<p>Die Anfänge unserer Firma reichen bis ins Mittelalter zurück, als Horst Holzmann
+    begann seine bisher für den Eigenbedarf hergestellten Möbel auch auf dem Markt der
+    nächsten Stadt zu verkaufen.</p>
+<p>Sein Sohn führte diese Tradition fort und nach ihm noch viele weitere Kinder und
+    Kindeskinder. Heute führt Schwiegersohn Harry Meier den Betrieb in der 15. Generation
+    weiter und arbeitet bereits seinen Enkel als Nachfolger ein.</p>
+<footer> <a href="kontakt.html">Kontakt</a> <a href="impressum.html">Impressum</a>
+    <p>© 2021 by selfHTML</p>
+</footer>
+</body>
+</html>

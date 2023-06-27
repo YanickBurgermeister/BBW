@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meine Taverne</title>
+    <link rel="stylesheet" href="css/mvp.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>Reservieren</li>
+                <li><a href="/reservationlist">Reservationsliste</a></li>
+                <li><a href="/Foodback">Foodback</a></li>
+                <li><a href="/contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <header>
+                <h1>Reservation erfassen</h1>
+            </header>
+            <form th:object="${reservation}" th:action="@{/addreservation}" method="post">
+                <h3>Bitte ausfüllen:</h3>
+                <label for="nameid">Namen:</label>
+                <input type="text" id="nameid" name="name" th:field="*{name}" size="20" placeholder="Name">
+
+                <label for="prenameid">Vornamen:</label>
+                <input type="text" id="prenameid" name="prename" th:field="*{prename}" size="20" placeholder="Vorname">
+
+                <label for="option">Wählen Sie aus:</label>
+                <select id="option" name="option" th:field="*{option}">
+                    <option value="lunch">Mittagessen</option>
+                    <option value="supper">Abendessen</option>
+                </select>
+                <label for="message">Ihre besonderen Wünsche:</label>
+                <textarea cols="40" rows="5" id="message" name="message" placeholder="Wunsch" th:field="*{message}"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>
+            <small>Restaurant Hohliebestübli Adelboden: https://www.hohliebestuebli.ch</small>
+        </p>
+    </footer>
+</body>
+</html>

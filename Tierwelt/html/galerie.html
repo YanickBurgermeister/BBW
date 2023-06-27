@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Galerie</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="icon" href="images/clipart.png">
+	</head>
+	
+	<body>
+		<header>
+			<h1>Galerie</h1>
+			<nav id="menu">
+				<a class="active" href="index.html">Startseite</a>
+				<a class="disabled">Galerie</a>
+				<a class="active" href="lebensraum.html">Lebensraum</a>
+				<a class="active" href="besuch.html">Besuch</a>
+				<a class="active" href="Impressum.html">Impressum</a>
+			</nav>
+		</header>
+		<main id="galerie">
+			<h1>Der Steinbock</h1>
+			<div>
+				<figure>
+					<img src="images/steinbock1.png"/>
+					<figcaption>Steinbock auf der Alp</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock2.png"/>
+					<figcaption>Steinbock mit blick direkt in die Kamera</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock3.png"/>
+					<figcaption>Steinbock auf den Felsen</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock4.png"/>
+					<figcaption>Steinbock in den Alpen</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock6.png"/>
+					<figcaption>Steinbock auf einem Felsen beim Sonnenuntergang</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock7.png"/>
+					<figcaption>Steinböcke auf der Alp im Frühling</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock8.png"/>
+					<figcaption>Steinbock mit Panorama</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock9.png"/>
+					<figcaption>Steinbock auf einem hohen Felsen über dem Tal</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock10.png"/>
+					<figcaption>Steinbock auf einem Felsen in der Sonnendämmerung</figcaption>
+				</figure>
+				<figure>
+					<img src="images/steinbock11.png"/>
+					<figcaption>Steinbock auf der Alp im frühen Herbst</figcaption>
+				</figure>
+			
+			</div>
+		</main>
+		<footer>
+			<ul>
+				<li><a href="Impressum.html">Impressum</a></li>
+				<li><a href="Impressum.html">Kontakt</a></li>
+				<li><p>© Copyright by Yanick Burgermeister</p></li>
+			</ul>
+		</footer>
+		<script>
+			window.onscroll = function () {
+				scrollFunction()
+			};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.querySelector("nav").style.top = "0";
+					document.querySelector("nav").style.borderBottom = "3px solid lightslategrey";
+				} else {
+					document.querySelector("nav").style.borderBottom = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

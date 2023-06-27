@@ -1,0 +1,387 @@
+html, body{
+    width: 100%;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+figure{
+    width: 100%;
+    margin: 0;
+    background: transparent;
+}
+
+header {
+    border-bottom: 2px solid #B0DDFFBF;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: lightslategrey;
+    color: white;
+}
+
+header h1, #galerie h1 {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+main {
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.mainMap {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.active {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    background-color: white;
+}
+
+.disabled {
+    pointer-events: none;
+    font-weight: bold;
+    color: #B0DDFFBF;
+    background-color: lightslategrey;
+}
+
+footer {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    background-color: lightslategrey;
+    color: white;
+    bottom: 0;
+    flex-grow: 1;
+    border-top: 2px solid #B0DDFFBF;
+    height: 7rem;
+    max-height: 7rem;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul li a{
+    background-color: lightslategrey;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+footer li{
+    text-align: center;
+    list-style: none;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+nav {
+    z-index: 2;
+    width: 100%;
+    background-color: lightslategrey;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(176, 221, 255, 0.75);
+    color: white;
+}
+
+#schweiz {
+    z-index: 0;
+    height: 40rem;
+    transition: 4s;
+}
+
+#infos {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 0.2rem;
+    transition: 0.3s;
+    background-color: white;
+    z-index: 2;
+    height: 1.3rem;
+    visibility: hidden;
+    margin-top: -2rem;
+}
+
+#location:hover #lebensraum {
+    visibility: visible;
+    transform: scale(700);
+}
+
+#location:hover #schweiz {
+    transform: scale(9);
+}
+
+#location:hover #infos {
+    visibility: visible;
+}
+
+#infos:hover {
+    background-color: rgba(176, 221, 255, 0.75);
+    color: white;
+}
+
+#lebensraum {
+    visibility: hidden;
+    margin-right: 10rem;
+    margin-top: -18rem;
+    z-index: 1;
+    height: 1px;
+    transition: 3s;
+}
+
+#besuchen #map{
+    display: flex;
+}
+
+#besuchen #map aside{
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+#mehrInfos {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 0.5rem;
+    transition: 0.3s;
+    background-color: white;
+}
+
+#mehrInfosDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#mehrInfos:hover {
+    background-color: rgba(176, 221, 255, 0.75);
+    color: white;
+}
+
+body #Impressum {
+    margin-left: 2rem;
+    max-width: 97%;
+}
+
+#galerie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#galerie div {
+    display: grid;
+    width: 70%;
+    gap: 1rem;
+    margin: 0;
+    grid-template-areas:
+    "steinbock1 steinbock2"
+    "steinbock3 steinbock2"
+    "steinbock7 steinbock4"
+    "steinbock7 steinbock6"
+    "steinbock8 steinbock8"
+    "steinbock10 steinbock9"
+    "steinbock11 steinbock9";
+}
+
+#galerie div figure:first-child {
+    grid-area: steinbock1;
+}
+
+#galerie div figure:nth-child(2n) {
+    grid-area: steinbock2;
+}
+
+#galerie div figure:nth-child(3n) {
+    grid-area: steinbock3;
+}
+
+#galerie div figure:nth-child(4n) {
+    grid-area: steinbock4;
+}
+
+#galerie div figure:nth-child(5n) {
+    grid-area: steinbock6;
+}
+
+#galerie div figure:nth-child(6n) {
+    grid-area: steinbock7;
+}
+
+#galerie div figure:nth-child(7n) {
+    grid-area: steinbock8;
+}
+
+#galerie div figure:nth-child(8n) {
+    grid-area: steinbock9;
+}
+
+#galerie div figure:nth-child(9n) {
+    grid-area: steinbock10;
+}
+
+#galerie div figure:last-child {
+    grid-area: steinbock11;
+}
+
+figure{
+    position: relative;
+}
+
+#galerie figure img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+#startseite div div{
+    display: flex;
+    margin: 1rem;
+    width: 90%;
+}
+
+#startseite div div aside{
+    margin-right: 1rem;
+    width: 80rem;
+    display: flex;
+    align-items: center;
+}
+
+#startseite div div img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+#startseite div div aside div{
+    max-width: 15rem;
+    min-width: 15rem;
+}
+
+#startseite div div figure{
+    width: 20rem;
+}
+
+figure figcaption{
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+figure:hover figcaption{
+    display: flex;
+    justify-content: center;
+    background: #eeeeee80;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px){
+    #galerie div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #startseite div div{
+        flex-direction: column;
+    }
+
+    #startseite div div aside{
+        width: 55rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html, body{
+        background-color: darkgrey;
+    }
+
+    header {
+        border-bottom: 2px solid navy;
+    }
+
+    header, footer {
+        background-color: lightslategrey;
+        color: white;
+    }
+
+    main {
+        background-color: darkgrey;
+    }
+
+    .active {
+        color: white;
+        background-color: #505050;
+    }
+
+    .disabled {
+        color: navy;
+        background-color: lightslategrey;
+    }
+
+    footer {
+        border-top: 2px solid navy;
+    }
+
+    nav {
+        background-color: lightslategrey;
+    }
+
+    nav a:hover {
+        background-color: navy;
+        color: azure;
+    }
+
+    #infos {
+        color: black;
+        border: 1px solid black;
+        background-color: darkgrey;
+    }
+
+    #infos:hover {
+        background-color: navy;
+        color: azure;
+    }
+}

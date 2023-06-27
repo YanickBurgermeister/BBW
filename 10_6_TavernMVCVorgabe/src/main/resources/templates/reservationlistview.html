@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meine Taverne</title>
+    <link rel="stylesheet" href="css/mvp.css">
+    <!-- link rel="stylesheet" href="css/tavern.css"-->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/addreservation">Reservieren</a></li>
+                <li>Reservationsliste</li>
+                <li><a href="/Foodback">Foodback</a></li>
+                <li><a href="/contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <header>
+                <h1>Die Liste der Reservationen</h1>
+            </header>
+            <table>
+                <thead>
+                <tr>
+                    <th>Gast</th>
+                    <th>Essen</th>
+                    <th>Bemerkung</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="reservation : ${reservationlist}">
+                        <td th:text="${reservation.prename} + ' ' + ${reservation.name}"></td>
+                        <td th:text="${reservation.option}"></td>
+                        <td th:text="${reservation.message}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>
+            <small>Restaurant Hohliebestübli Adelboden: https://www.hohliebestuebli.ch</small>
+        </p>
+    </footer>
+</body>
+</html>

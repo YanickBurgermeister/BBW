@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "OlatCheat",
+  "version": "1.3",
+  "description": "Fills in the right answers",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "runtime",
+    "storage"  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://olat.bbw.ch/*"      ],
+      "js": [
+        "content.js"      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "solutions.json"  ]
+}
