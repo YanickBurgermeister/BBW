@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Meine Taverne</title>
-    <link rel="stylesheet" href="css/mvp.css">
+    <link rel="stylesheet" href="/css/mvp.css">
+    <link rel="stylesheet" href="/css/cookiePopup.css">
 </head>
 <body>
+<div id="cookiePopup" class="hide">
+    <p>
+        Our website uses cookies to provide your browsing experience and
+        relevant information. Before continuing to use our website, you agree &
+        accept of our <a href="/datenschutzerklärung.html">Cookie Policy & Privacy.</a>
+    </p>
+    <button id="acceptCookie">Accept</button>
+</div>
+<!-- Script -->
+<script src="/js/cookiePopup.js"></script>
     <header>
         <nav>
             <ul>
@@ -45,7 +56,7 @@
             <aside>
                 <h3>Dessert</h3>
                 <figure>
-                    <img src="images/essen3.jpg" width="400" alt="Dessert">
+                    <img src="/images/essen3.jpg" width="400" alt="Dessert">
                     <figcaption>Allerlei</figcaption>
                 </figure>
             </aside>
@@ -55,6 +66,7 @@
         <hr>
         <p>
             <small>Restaurant Hohliebestübli Adelboden: https://www.hohliebestuebli.ch</small>
+            <small><a href="/datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></small>
         </p>
     </footer>
 </body>
